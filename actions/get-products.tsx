@@ -23,7 +23,7 @@ const getProducts = async (query: Query): Promise<Product[]> => {
   });
 
   const res = await fetch(url, { cache: "no-store" });
-  // Não permite o cache das categorias, sempre atualizando e buscando as categorias presentes
+  // Não permite o cache dos produtos, sempre atualizando e buscando os produtos presentes
 
   return res.json();
 };
