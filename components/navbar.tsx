@@ -7,7 +7,7 @@ import NavBarActions from "./navbar-actions";
 
 const NavBar = async () => {
   const categories = await getCategories();
-
+  
   return (
     <div className="border-b">
       <Container>
@@ -15,7 +15,7 @@ const NavBar = async () => {
           <Link href={"/"} className="ml-4 lg:ml-0 gap-x-2">
             <p className="font-bold text-xl">Loja</p>
           </Link>
-          <MainNav data={categories} />
+          <MainNav data={categories || []} />
           <NavBarActions />
         </div>
       </Container>
